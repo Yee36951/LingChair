@@ -8,13 +8,18 @@ const logger = pino(require('pino-pretty')())
 function compileJs(path) {
     babel.transformFileAsync(path, {
         presets: [
-            "@babel/preset-env",
+            [
+                "@babel/preset-env",
+                {
+                    modules: false,
+                },
+            ],
             "@babel/preset-react",
         ],
         targets: {
-            chrome: "80",
-            android: "80",
-        }
+            chrome: "84",
+            android: "84",
+        },
     }).then(function (result) {
         let code = result.code
         io.open(path, 'w').writeAll(uglify.minify(code, {
@@ -27,6 +32,8 @@ function compileJs(path) {
                     'require',
                     'exports',
                     'module',
+                    'import',
+                    'from',
                 ],
             }
         }).code).close()
