@@ -1,11 +1,11 @@
 const compiler = require('./compiler')
 const io = require('./io')
-const { lingChairConfig, lingchairConfig } = require('./config')
+const { lingChairConfig } = require('./config')
 const logger = require('./logger')
 
-io.copyDir('./src/page', lingchairConfig.http.pathName)
+io.copyDir('./src/page', lingChairConfig.http.pathName)
 
-compiler(lingchairConfig.http.pathName)
+compiler(lingChairConfig.http.pathName)
 
 logger.info('任务已开始!')
 
