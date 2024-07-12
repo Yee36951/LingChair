@@ -18,5 +18,5 @@ const CONFIG = io.open('config.json', 'rw').checkExistsOrWriteJson({
 }).readAllJsonAndClose()
 
 module.exports = {
-    lingchairConfig: CONFIG,
+    lingChairConfig: CONFIG,
 }
