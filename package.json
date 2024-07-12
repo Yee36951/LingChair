@@ -1,6 +1,32 @@
 {
+  "name": "lingchair",
+  "description": "LingChair is a simple, lightweight and powerful Instant Messaging project☘️",
+  "version": "0.0.0",
+  "preview": true,
+  "author": {
+    "name": "MoonLeeeaf",
+    "url": "https://github.com/MoonLeeeaf"
+  },
+  "bugs": {
+    "url": "https://github.com/LingChair/LingChair/issues"
+  },
+  "homepage": "https://github.com/LingChair/LingChair",
+  "main": "./index.js",
+  "scripts": {
+    "start": "node ./src/starter.js",
+    "build": "node ./src/builder.js"
+  },
   "dependencies": {
     "express": "^4.19.2",
+    "pino": "^9.2.0",
+    "pino-pretty": "^11.2.1",
     "socket.io": "^4.7.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.24.8",
+    "@babel/preset-env": "^7.24.8",
+    "@babel/preset-react": "^7.24.7",
+    "clean-css": "^5.3.3",
+    "uglify-js": "^3.18.0"
   }
 }
