@@ -12,6 +12,7 @@
   },
   "homepage": "https://github.com/LingChair/LingChair",
   "main": "./index.js",
+  "type": "commonjs",
   "scripts": {
     "start": "node ./src/starter.js",
     "build": "node ./src/builder.js"
