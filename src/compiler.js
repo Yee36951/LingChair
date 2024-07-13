@@ -1,6 +1,6 @@
 const babel = require("@babel/core")
 const io = require('./io')
-const CleanCSS = require('clean-css')({})
+const CleanCSS = require('clean-css')
 const uglify = require('uglify-js')
 const { pino } = require("pino")
 const logger = pino(require('pino-pretty')())
@@ -42,7 +42,7 @@ function compileJs(path) {
 }
 
 function compileCss(path) {
-    CleanCSS.minify(path, function (err, out) {
+    new CleanCSS({}).minify(io.open(path, 'r').readAllAndClose(), function (err, out) {
         if (err) return logger.error(err)
         io.open(path, 'w').writeAll(out.styles).close()
         logger.info(`Compile css: ${path}`)
