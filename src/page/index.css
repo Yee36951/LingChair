@@ -1,7 +1,8 @@
-#app-inner::after {
-    content: "";
-    position: sticky;
-    bottom: 0;
-    display: block;
-    align-self: center;
+body {
+    --lingchair-window-width: 0px;
+    --lingchair-window-height: 0px;
+}
+
+:not(:defined) {
+    visibility: hidden;
 }
