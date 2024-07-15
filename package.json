@@ -16,7 +16,7 @@
   "scripts": {
     "start": "node ./src/starter.js",
     "build": "node ./src/builder.js",
-    "debug": "node ./src/index.js --build"
+    "debug": "node ./index.js --build"
   },
   "dependencies": {
     "express": "^4.19.2",
