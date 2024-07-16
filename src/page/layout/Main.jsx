@@ -10,9 +10,6 @@ function openDrawer(toggle) {
 }
 
 class Main extends React.Component {
-    constructor() {
-        super()
-    }
     render() {
         return (
             <div id="app-inner" style={{
@@ -28,7 +25,7 @@ class Main extends React.Component {
                     <mdui-navigation-rail-item icon="group" onClick={() => openDrawer()} value="groups"></mdui-navigation-rail-item>
 
                     <mdui-button-icon icon="settings" slot="bottom" onClick={function() {
-
+                        
                     }}></mdui-button-icon>
               </mdui-navigation-rail>
 
